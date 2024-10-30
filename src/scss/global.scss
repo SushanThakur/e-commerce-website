@@ -14,11 +14,20 @@ body{
   font-family: $def-font;
 }
 
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
 h1{font-size: 2.5rem;}
 
 
 svg{
   height: 2rem;
+}
+
+.button{
+  padding: 0.8em 2em;
 }
 
 .scaleUp{
@@ -42,20 +51,33 @@ svg{
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
+
+    a{
+      color: inherit;
+      display: flex;
+    }
   }
 
   div{
     display: flex;
+
+    svg{
+      margin-right: 1rem;
+    }
   }
 
   .cart-item{
+    height: 1.5rem;
+    width: 1.5rem;
     position: absolute;
     font-size: 0.7rem;
     font-weight: 700;
     color: #fff;
     background-color: red;
-    padding: 0.3em 0.8em;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     right: 0.2rem;
     top: 0.2rem;
   }
@@ -67,9 +89,8 @@ svg{
 
 .card-container{
   width: 100vw;
-  background-color: blue;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-columns: repeat(auto-fit, 250px);
   gap: 2rem;
   align-items: center;
   justify-content: center;
@@ -77,6 +98,74 @@ svg{
 }
 
 .item-card{
-  background-color: green;
   padding: 0.8rem;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  justify-content: flex-start;
+  background-color: #c9d2d9;
+
+  img{
+    width: 100%;
+    transition: 0.3s;
+    
+    // &:hover{
+    //   scale: 1.5;
+    // }
+  }
+
+  p{
+    // background-color: blue;
+    max-height: 2.8rem;
+    overflow: hidden;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    svg{
+      height: 1rem;
+    }
+  }
+
+  .meta{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price{
+    font-weight: 700;
+    color: #ff2900;
+  }
+
+  .averageRating{
+    font-size: 0.8rem;
+  }
+
+  // Add To Cart
+
+  .cart-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    button{
+      width: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  .add-to-cart{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
 }

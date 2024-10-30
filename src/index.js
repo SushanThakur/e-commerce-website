@@ -1,15 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import Header from './components/Header';
+import { BrowserRouter } from 'react-router-dom';
 
 import './css/global.css';
-import Item from './components/Item';
+import App from './App';
+
+function Root() {
+  
+  const [cart, setCart] = useState(0);
+
+  return(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App cart={cart} setCart={setCart} />
+      </BrowserRouter>
+  </React.StrictMode>
+  )
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Header />
-    <Item />
-  </React.StrictMode>
-);
+root.render(<Root />);
 
