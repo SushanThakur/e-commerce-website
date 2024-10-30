@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
-export default function Header({cart}){
+export default function Header({ cart }){
+
   return(
     <div className="header-cont">
       <section className="header">
