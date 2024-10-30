@@ -49,13 +49,14 @@ svg {
 }
 .header-cont .header a {
   color: inherit;
-  display: flex;
 }
 .header-cont div {
   display: flex;
 }
 .header-cont div svg {
-  margin-right: 1rem;
+  position: absolute;
+  right: 1.2rem;
+  top: 1.4rem;
 }
 .header-cont .cart-item {
   height: 1.5rem;

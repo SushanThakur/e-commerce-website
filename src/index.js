@@ -6,8 +6,18 @@ import './css/global.css';
 import App from './App';
 
 function Root() {
+
+  const cartCol = {
+    ids : [] ,
+    idQuant: [],
+  }
+
+  function updateCart(id, quant) {
+    cart.ids.push(id);
+    cart.idQuant.push(quant);
+  }
   
-  const [cart, setCart] = useState(0);
+  const [cart, setCart] = useState(cartCol);
 
   return(
     <React.StrictMode>
